@@ -25,3 +25,6 @@ yarn-error.log*
 # 4. 기타 로그 및 캐시 파일
 *.log
 .eslintcache
+
+# 5. PDF 원본 제외
+/pdf
