@@ -1,0 +1,27 @@
+# 1. 운영체제 자동 생성 파일 (Mac & Windows)
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 2. 에디터 및 IDE 설정 (개인 작업 환경 파일이 공유되는 것 방지)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 3. Node.js 패키지 (JS 개발 시 npm 등을 사용하게 될 경우 필수)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 4. 기타 로그 및 캐시 파일
+*.log
+.eslintcache
