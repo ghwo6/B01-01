@@ -1,0 +1,16 @@
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 20px;
+}
+h1 {
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.weight-100 { font-weight: 100;}
+.weight-400 { font-weight: 400;}
+.weight-700 { font-weight: 700;}
+.weight-900 { font-weight: 900;}
