@@ -5,11 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>나의 첫 웹 사이트</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>안녕하세요!</h1>
-    <p>이것은 index.html 파일입니다.</p>
+    <header>
+        <a href="#hero" class="logo">로고</a>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle">다크 모드</button>
+        <button class="hamburger">메뉴</button>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>안녕하세요!! 김호재라고 합니다.</h2>
+            <p>코디세이 올인원 2기입니다.</p>
+            <p>여러분들과 같이 공부하고 세상을 밝히고 싶습니다.</p>
+            <p>호기심이 많습니다.</p>
+            <p>원리에 대해 파악하는것을 좋아합니다.</p>
+        </section>
+        <section id="about">자기소개<img src="images/reg_made_in_abyss.webp" alt="만화 캐릭터" class="profile-img"></section>
+        <section id="skills">
+            <ul>기술 스택</ul>
+            <ul>파이썬</ul>
+        </section>
+        <section id="projects"><div class="status">로딩 / 에러 / 빈 상태</div></section>
+        <section id="contact"><form>이름 / 이메일 / 메시지</form></section>
+    </main>
+
+    <footer>2026 · GitHub</footer>
+    <button class="scroll-top">↑</button>
 </body>
 
 </html>
