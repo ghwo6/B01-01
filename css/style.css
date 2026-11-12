@@ -1,6 +1,40 @@
+:root {
+    --color-bg: #ffffff;
+    --color-text: #222831;
+    --color-primary: #3b82f6;
+    --space-md: 1rem;
+    --header-height: 84px;
+    --transition: 0.3s ease;
+}
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
 img {
-    max-width: 40%;
+    max-width: 20%;
     height: auto;
     display: block;
 }
 
+[data-theme="dark"] {
+    --color-bg:#121418;
+    --color-text:#e6e9ef;
+    --color-primary:#60a5fa;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: maxheight 0.3s ease;
+}
