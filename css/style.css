@@ -3,17 +3,40 @@
     --color-text: #222831;
     --color-primary: #3b82f6;
     --space-md: 1rem;
-    --header-height: 84px;
+    --header-height: 64px;
     --transition: 0.3s ease;
+    --font-main: "Noto Sans KR", sans-serif;
 }
+
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
+    font-family: var(--font-main);
 }
 
-img {
+main {
+    padding-top: var(--header-height);
+}
+
+button {
+    background-color: var(--color-bg);
+    color:var(--color-text);
+    font-family: var(--font-main);
+}
+
+.profile-img {
     max-width: 20%;
+    min-width: 15%;
     height: auto;
+    min-height: 15%;
+    max-height: 20%;
     display: block;
 }
 
@@ -25,16 +48,87 @@ img {
 
 .header {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    padding: 0 var(--space-md);
     display: flex;
     align-items: center;
+    gap: 0.75rem;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    box-sizing: border-box;
 }
 
 .logo {
-    margin-right: auto;
+    margin-right: auto; /* 오른쪽 나열 */
 }
 
 .nav {
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg);
     max-height: 0;
     overflow: hidden;
-    transition: maxheight 0.3s ease;
+    transition: max-height var(--transition);
+}
+
+.nav.active {
+    max-height: 300px;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column; /* 모바일에서는 세로로 뜸 */
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+    gap: 1rem;
+}
+.about-content {
+    display: flex;
+    /* 모바일: 이미지 위 글 아래 */
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.about-text {
+    text-align: center;
+}
+
+
+
+.header.scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 태블릿 이상 (768px ~) 햄버거 숨김, 메뉴를 헤더 안에 가로로 배치 */
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+    .nav {
+        position: static;
+        width: auto;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .nav-list {
+        flex-direction: row; /* 가로로 나열함 */
+        padding: 0;
+    }
+    .about-content{
+        /* 태블릿 이상일때 -- 이미지 왼쪽, 글 오른쪽 */
+        flex-direction: row;
+        justify-content: center;
+    }
+    .about-text {
+        text-align: left;
+    }
 }

@@ -5,22 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>호재의 첫 웹사이트</title>
+
+    <!-- 구글 폰튼-->
+    <link rel="preconnect" href="https://fonts.goolgeapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- jua + Noto Sans Korean-->
+
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <a href="#hero" class="logo">히어로 페이지</a>
-        <nav>
-            <ul>
+        <nav class="nav">
+            <ul class="nav-list">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <button class="theme-toggle">다크 모드</button>
-        <button class="hamburger">메뉴</button>
+        <button type="button" class="theme-toggle">다크 모드</button>
+        <button type="button" class="hamburger">메뉴</button>
     </header>
 
     <main>
@@ -32,31 +42,35 @@
 
             <a href="#projects" class="btn">프로젝트</a>
             <a href="#contact" class="btn">연락하기</a>
+
         </section>
 
-        <section id="about">자기소개<img src="images/reg_made_in_abyss.webp" alt="만화 캐릭터" class="profile-img">
-
-            <p>안녕하세요</p>
-            <p>배우는걸 즐기는 김호재입니다.</p>
-            <p>가끔은 남들을 가르쳐주기도 합니다.</p>
-            <p>청소년들을 가르치는 봉사활동을 6년간 했습니다.</p>
-
+        <section id="about"><h1>자기소개</h1>
+            <div class="about-content">
+                <img src="images/reg_made_in_abyss.webp" alt="만화 캐릭터" class="profile-img">
+                <div class="about-text">
+                    <p>안녕하세요</p>
+                    <p>배우는걸 즐기는 김호재입니다.</p>
+                    <p>남들과 함께 공부하며 익히는</p>
+                    <p>코디세이 생활이 되었으면 합니다.</p>
+                </div>
+            </div>
         </section>
 
         <section id="skills">
-            <ul>기술 스택</ul>
-            <ul>파이썬</ul>
+            <ul><h3>기술 스택</h3></ul>
+            <ul><li>파이썬</li></ul>
         </section>
-        <section id="Learing">
-            <ul>배우고 있는 기술</ul>
-            <ul>JS(javascript)</ul>
+        <section id="Learning">
+            <ul><h3>배우고 있는 기술</h3></ul>
+            <ul><li>JS(javascript)</li></ul>
         </section>
         <section id="projects"><div class="status">로딩 / 에러 / 빈 상태</div></section>
         <section id="contact"><form>이름 / 이메일 / 메시지</form></section>
     </main>
 
     <footer>2026 · GitHub</footer>
-    <button class="scroll-top">↑</button>
+    <button type="button" class="scroll-top">↑</button>
 </body>
 
 </html>
