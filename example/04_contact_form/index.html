@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact 폼 테스트</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <h1>문의하기</h1>
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" placeholder="이름을 입력하세요">
+                    <p class="error-msg" id="name-error"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" placeholder="example@email.com">
+                    <p class="error-msg" id="email-error"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">메시지</label>
+                    <textarea id="message" rows="4" placeholder="문의 내용을 입력하세요"></textarea>
+                    <p class="error-msg" id="message-error"></p>
+                </div>
+                <button type="submit">보내기</button>
+                <p class="success-msg" id="success-msg"></p>
+            </form>
+        </main>
+    </body>
+</html>

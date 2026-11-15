@@ -1,0 +1,28 @@
+main {
+    max-width:900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: sans-serif;
+}
+
+.controls {
+    display: flex;
+    gap:0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 1rem;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.status {
+    margin: 1rem 0;
+}

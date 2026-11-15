@@ -1,13 +1,15 @@
 :root {
     --color-bg: #ffffff;
-    --color-text: #222831;
+    --color-text: #2b3122;
     --color-primary: #3b82f6;
     --space-md: 1rem;
     --header-height: 64px;
     --transition: 0.3s ease;
-    --font-main: "Noto Sans KR", sans-serif;
+    --font-main: "Jua", sans-serif;
 }
-
+i {
+    color: #ffffff;
+}
 section {
     max-width: 1000px;
     margin: 0 auto;
@@ -25,6 +27,11 @@ main {
     padding-top: var(--header-height);
 }
 
+p {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+}
+
 button {
     background-color: var(--color-bg);
     color:var(--color-text);
@@ -32,8 +39,10 @@ button {
 }
 
 .profile-img {
-    max-width: 20%;
-    min-width: 15%;
+    /* max-width: 20%;
+    min-width: 15%; */
+    max-width: 146px;
+    min-width: 212px;
     height: auto;
     min-height: 15%;
     max-height: 20%;
@@ -43,7 +52,7 @@ button {
 [data-theme="dark"] {
     --color-bg:#121418;
     --color-text:#e6e9ef;
-    --color-primary:#60a5fa;
+    --color-primary:#60fa63;
 }
 
 .header {
@@ -102,6 +111,14 @@ button {
 }
 
 
+#skills ul {
+    list-style-position: inside; /* 점을 글자 안쪽으로 */
+    padding: 0;
+}
+#Learning ul {
+    list-style-position: inside; /* 점을 글자 안쪽으로 */
+    padding: 0;
+}
 
 .header.scrolled {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);

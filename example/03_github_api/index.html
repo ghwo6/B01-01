@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GitHub API 테스트</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+    <main>
+        <h1>GitHub 저장소 테스트</h1>
+
+        <!-- 레이트리밋(시간당 60회)을 아끼기 위해 버튼 눌렀을 때만 요청 -->
+        <div class="controls">
+            <input type="text" id="username-input" placeholder="깃허브 아이디 입력" value="">
+            <button type="button" id="load-btn">불러오기</button>
+        </div>
+
+        <!-- 4가지 상태(로딩 / 에러 / 빈 상태) 표시 영역 -->
+        <div id="status" class="status"></div>
+
+        <!-- 성공 시 카드 목록이 들어갈 영역 -->
+        <div id="project-grid" class="project-grid"></div>
+    </main>
+
+    </body>
+</html>
