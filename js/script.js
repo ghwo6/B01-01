@@ -84,14 +84,30 @@ hamburgerBtn.addEventListener('click',() => {
     nav.classList.toggle('active');
 });
 
-// 스크롤 이벤트 리스너
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
+// 메뉴 링크 클릭 시 햄버거 메뉴 닫기
+navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('active')
+    });
 });
+
+// 글자 애니메이션 추가함
+
+heroTitle.textContent = '';
+heroTitle.classList.add('typing');
+
+const typeText = () => {
+    heroTitle.textContent = text.slice(0,index +1);
+    index++;
+
+    if (index < text.length) {
+        setTimeout(typeText,100);
+    } else {
+        heroTitle.classList.remove('typing');
+    }
+};
+
+typeText();
 
 // contact 로직
     // contact폼 에러 함수 선언함
@@ -236,12 +252,7 @@ const fetchRepos = async () => {
     // 페이지 로드시 실행
     fetchRepos();
 
-// 메뉴 링크 클릭 시 햄버거 메뉴 닫기
-navLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-        nav.classList.remove('active')
-    });
-});
+
 
 
 // 스크롤 탑 버튼 포시 및 클릭 이동
@@ -279,23 +290,7 @@ sections.forEach((section) => {
     observer.observe(section);
 })
 
-// 글자 애니메이션 추가함
 
-heroTitle.textContent = '';
-heroTitle.classList.add('typing');
-
-const typeText = () => {
-    heroTitle.textContent = text.slice(0,index +1);
-    index++;
-
-    if (index < text.length) {
-        setTimeout(typeText,100);
-    } else {
-        heroTitle.classList.remove('typing');
-    }
-};
-
-typeText();
 
 // 이메일 보내기
 

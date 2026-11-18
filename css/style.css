@@ -9,13 +9,14 @@
     --color-header-scrolled:#f3f6fb;
 }
 i {
-    color: #ffffff;
+    color: var(--color-primary);
 }
 section {
     max-width: 1000px;
     margin: 0 auto;
     padding: 4rem 1.5rem;
     text-align: center;
+    scroll-margin-top: var(--header-height);
 }
 
 body {
@@ -42,7 +43,6 @@ button {
 .profile-img {
     /* max-width: 20%;
     min-width: 15%; */
-    max-width: 146px;
     min-width: 212px;
     height: auto;
     min-height: 15%;
@@ -118,17 +118,25 @@ footer {
 }
 
 
-#skills ul {
-    list-style-position: inside; /* 점을 글자 안쪽으로 */
-    padding: 0;
-}
-#Learning ul {
+#skills ul,#Learning ul {
     list-style-position: inside; /* 점을 글자 안쪽으로 */
     padding: 0;
 }
 
 .header.scrolled {
+    background-color: var(--color-header-scrolled);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .scroll-top {
@@ -260,9 +268,6 @@ html {
     scroll-behavior: smooth;
 }
 
-section {
-    scroll-margin-top: var(--header-height);
-}
 
 
 /* 글자가 깜박이는 효과 추가 */
@@ -306,5 +311,15 @@ section {
     .form-group {
         width: 600px;
         margin: 0 auto;
+    }
+}
+/* 데스크톱 이상 (1024px ~) */
+@media (min-width: 1024px) {
+    section {
+        max-width: 1100px;
+        padding: 5rem 2rem;
+    }
+    .nav-list {
+        gap: 2rem;
     }
 }
