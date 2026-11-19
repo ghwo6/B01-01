@@ -43,7 +43,7 @@ button {
 .profile-img {
     /* max-width: 20%;
     min-width: 15%; */
-    min-width: 212px;
+    max-width: 212px;
     height: auto;
     min-height: 15%;
     max-height: 20%;
