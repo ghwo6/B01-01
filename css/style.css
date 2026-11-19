@@ -40,6 +40,22 @@ button {
     font-family: var(--font-main);
 }
 
+.btn {
+    display: inline-block;
+    margin: 0.5rem 0.25rem;
+    padding: 0.65rem 1.4rem;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    text-decoration: none;
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.btn:hover {
+    opacity: 0.88;
+    transform: translateY(-2px);
+}
+
 .profile-img {
     /* max-width: 20%;
     min-width: 15%; */
@@ -243,8 +259,8 @@ input.invalid, textarea.invalid {
 
 .filter-btn.active {
     background-color: var(--color-primary);
-    color:#ffffff;
-    border-color:var(--color-primary);
+    color: var(--color-bg);
+    border-color: var(--color-primary);
 }
 
     /* 로딩스피너 */
@@ -293,6 +309,7 @@ html {
         width: auto;
         max-height: none;
         overflow: visible;
+        background-color: transparent;
     }
 
     .nav-list {

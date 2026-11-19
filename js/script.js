@@ -225,7 +225,7 @@ const fetchRepos = async () => {
         const response = await fetch(url);
 
         if (response.status === 403){
-            throw new Error('GitHub API 요청 한도(시간당 60회를 초과했습니다. 잠시 후 다시 시도해 주세요.');
+            throw new Error('GitHub API 요청 한도(시간당 60회)를 초과했습니다. 잠시 후 다시 시도해 주세요.');
         }
 
         if (!response.ok) {
